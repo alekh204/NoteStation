@@ -1,0 +1,59 @@
+/* for index page: */
+#main_content {
+  position: relative;
+}
+
+/* for login and signup page: */
+
+#login_section {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/image7.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.links {
+  text-decoration: none;
+}
+
+#navbar {
+  width: 100%;
+  height: 10vh;
+}
+
+.navs {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#navbarNavDropdown {
+  position: absolute;
+  right: 5%;
+}
+
+/* #container {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 40%;
+} */
