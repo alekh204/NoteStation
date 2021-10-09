@@ -20,7 +20,7 @@ function homeController(req,res)
                 return data.name;
             
             }).then((name) => {
-                console.log(name);
+                // console.log(name);
                 res.render("users/dashboard", { name })
             })
         }

@@ -19,8 +19,8 @@ function initRoutes(app)
     app.post('/postregister',authController().postRegister);
     app.post('/login',authController().postLogin);
     app.post('/logout',authController().logout);
-    app.get('/showNotes',searchController().index)
-    app.post('/showNotes',searchController().postSearch)
+    app.get('/searchNotes',searchController().index)
+    app.post('/searchNotes',searchController().postSearch)
 }
 
 module.exports = initRoutes;
