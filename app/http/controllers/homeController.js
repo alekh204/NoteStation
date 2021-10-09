@@ -3,6 +3,8 @@ Returning a object from a function
 */
 
 const path = require('path');
+const User = require('../../models/user');
+const passport = require('passport');
 
 function homeController(req,res)
 {
@@ -13,7 +15,14 @@ function homeController(req,res)
         },
         dashboard : function(req,res)
         {
-            res.render('users/dashboard');
+            objId = req.session.passport.user
+            User.findOne({ _id: objId }).then((data) => {
+                return data.name;
+            
+            }).then((name) => {
+                console.log(name);
+                res.render("users/dashboard", { name })
+            })
         }
     }
 }

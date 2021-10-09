@@ -18,10 +18,11 @@ function addAlertMsg(data)
     document.getElementById('alert_area').innerHTML=alertElement;
 }
 
-form.addEventListener('submit', (e)=>{
+const createFrom = document.querySelector('#createForm');
+createFrom.addEventListener('submit', (e)=>{
   e.preventDefault();
   
-const formData = new FormData(form);
+const formData = new FormData(createFrom);
 const searchParam = new URLSearchParams();
 
 for (const pair of formData)

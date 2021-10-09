@@ -35,7 +35,7 @@ function authController(req, res) {
                     User.findOne({ _id: objId }).then((data) => {
                         return data.name;
                     }).then((name) => {
-                        res.render("users/dashboard", { name })
+                        res.render("users/dashboard", { name : name })
                     })
                 })
             })(req, res, next);

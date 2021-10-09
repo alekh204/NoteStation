@@ -1,6 +1,7 @@
 const path = require('path');
 const Note = require('../../models/note')
 const User = require("../../models/user");
+const passport = require('passport');
 
 function createNoteController(req, res) {
     return {
@@ -10,7 +11,7 @@ function createNoteController(req, res) {
                 console.log(data);
                 return data.name;
             }).then((name) => {
-                res.render("users/createNote", { name })
+                res.render("users/createNote", { name : name })
             })
 
         },
@@ -33,6 +34,7 @@ function createNoteController(req, res) {
                 const note = new Note({
                     title: title,
                     description: desc,
+                    user:req.session.passport.user
                 });
 
                 note.

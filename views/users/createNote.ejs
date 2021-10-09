@@ -53,7 +53,10 @@
                 class="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink"
               >
-                <a class="dropdown-item" href="/logout">Logout</a>
+              <form id="logout" action="/logout" method="POST">
+                <a href="#" onclick="document.getElementById('logout').submit()"
+                  >Logout</a>
+              </form>
               </div>
             </li>
           </ul>
@@ -65,7 +68,7 @@
     <hr />
     <br />
     <div id="form_container">
-      <form>
+      <form id="createForm">
         <div class="form-group w-25 m-4">
           <label for="inputAddress">Title:</label>
           <input
