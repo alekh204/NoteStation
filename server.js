@@ -23,7 +23,8 @@ app.use(flash());
 app.use((req,res,next)=>
 {
     res.locals.session = req.session;
-    res.locals.user= req.user
+    res.locals.user= req.user;
+    res.locals.note = req.note;
     next()
 });
 

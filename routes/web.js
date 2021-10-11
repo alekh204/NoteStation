@@ -20,7 +20,8 @@ function initRoutes(app)
     app.post('/login',authController().postLogin);
     app.post('/logout',authController().logout);
     app.get('/searchNotes',searchController().index)
-    app.post('/searchNotes',searchController().postSearch)
+    app.post('/searchNotes',searchController().postSearch);
+    app.post("/deleteNote", showNoteController().deleteNote);
 }
 
 module.exports = initRoutes;
